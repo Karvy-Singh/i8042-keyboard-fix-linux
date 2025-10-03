@@ -23,9 +23,9 @@ If your output contains something like this you can continue:
 [    1.336095] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
 [    4.758848] input: SynPS/2 Synaptics TouchPad as /devices/platform/i8042/serio1/input/input8
 ```
-Download **keyboard-reset.sh** and place the file in `systemd/system-sleep` folder (for Arch, it's `/usr/lib/systemd/system-sleep/`).
+Download **keyboard-reset-1.sh** or an alternate script **keyboard-reset-2.sh** (in case the first one doesn't work for you) and place the file in `systemd/system-sleep` folder (for Arch, it's `/usr/lib/systemd/system-sleep/`).
 Make the script executable:
 ```sh
-# chmod a+x /usr/lib/systemd/system-sleep/keyboard-reset.sh
+# chmod a+x /usr/lib/systemd/system-sleep/keyboard-reset-{i}.sh
 ```
 and you're done! Your keyboard/trackpad should now work when resuming from suspend.
